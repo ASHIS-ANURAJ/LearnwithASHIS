@@ -1,0 +1,395 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MATH-I.Q Burner</title>
+ 
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/blog-home.css'%}" rel="stylesheet">
+  <style>
+    video {
+    max-width: 100%;
+    height: auto;
+    }
+    .col-md-8
+    {
+      background-color: coral;
+    }
+    
+    #indexback
+    {
+      background-image: url("{% static 'images/c2.jpg'%}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;;
+      z-index: -2;
+      opacity: 1.2;
+
+    }
+    
+    #teaching1
+    {
+      width:15vw;
+      background-color:tomato;
+     
+    }
+    #teaching2
+    {
+      width:15vw;
+      background-color:tomato;
+     
+    }
+    .form-group
+    {
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        font-size: calc(7px + 3vw);
+        color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1vw 1vw;
+        flex-wrap: wrap;
+        width:100vw;
+        z-index: 2;
+    }
+    
+    #con-title
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: orange;
+      font-size: calc(6px + 4.5vw);
+      padding-top: calc(4px + 1.5vw);
+      padding-bottom: calc(4px + 3.5vw);
+      flex-wrap: wrap;
+      width:100vw;
+
+    }
+    #Maincontainer
+    {
+      background-image: url("{% static 'images/sw1.jpg'%}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;;
+      z-index: -2;
+      opacity: 1;
+      width:100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1vw 1vw;
+      flex-wrap: wrap;
+
+      
+
+    }
+    .form-control-c
+    {
+      width: calc(20px + 26vw);
+      height: calc(8px + 3.5vw);
+      margin: calc(8px + 3.5vw) calc(8px + 3.5vw);
+      padding: calc(1px + .5vw) calc(1px + .5vw);
+      text-align: center;
+      border: 2px solid red;
+      border-radius:  calc(4px + 1.5vw);
+      font-size: calc(4px + 1.5vw);
+
+      
+    }
+    #desc
+    {
+      width: calc(30px + 36vw);
+      height: calc(18px + 15vw);
+    }
+    .btn-btn-success
+    {
+      width: calc(26px + 14vw);
+      height: calc(12px + 7vw);
+      background-color:MediumSeaGreen;
+      font-size: calc(4px + 3.5vw);
+      color:blue;
+      border: 2px solid red;
+      border-radius: 2vw;
+    }
+    .anuraj1
+    {
+      width: calc(2px + 12vw);
+      height: calc(2px + 5vw);
+      font-size: calc(2px + 1.2vw);
+      border: 1px solid red;
+      border-radius: 0.5vw;
+      margin: calc(1px + .5vw) calc(1px + .5vw);
+      padding: calc(1px + .5vw) calc(1px + .5vw);
+      text-align: center;
+      background-color:orange;
+
+    }
+    .anuraj2
+    {
+      width: calc(2px + 12vw);
+      height: calc(2px + 5vw);
+      font-size: calc(2px + 1.2vw);
+      border: 1px solid red;
+      border-radius: 0.5vw;
+      margin: calc(1px + .5vw) calc(1px + .5vw);
+      padding: calc(1px + .5vw) calc(1px + .5vw);
+      text-align: center;
+      background-color:orange;
+
+    }
+    #home-1
+    {
+       width: calc(5px + 30vw);
+      height: auto;
+      display: flex;
+      padding: 1vw 1vw;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color:yellow;
+
+      
+    }
+    #home-2
+    {
+      width: calc(5px + 28vw);
+      height: auto;
+      display: flex;
+      padding: 0.1vw 0.1vw;
+      flex-wrap: wrap;
+      background-color:slateblue;
+      align-items: center;
+      justify-content: center;
+
+    }
+    #home-3
+    {
+      width: calc(5px + 26vw);
+      height: auto;
+      display: flex;
+      padding: 0.11vw 0.1vw;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+    }
+    #home-4
+    {
+      width: calc(5px + 12vw);
+      height: auto;
+      display: flex;
+      padding: 0.1vw 0.1vw;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+    }
+    #home-5
+    {
+      width: calc(5px + 12vw);
+      height: auto;
+      display: flex;
+      padding: 1vw 1vw;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .con-name1
+    {
+      color:brown;
+    }
+    .con-name2
+    {
+      color:brown;
+    }
+    #C-H
+    {
+       font-size: calc(4px + 2.5vw);
+
+    }
+   
+
+    @media (max-width: 800px)
+    {
+      #home-1
+      {
+        width: calc(20px + 60vw);
+        height: auto;
+        display: flex;
+        padding: 0.1vw 0.1vw;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color:yellow;
+
+      }
+      #home-2
+      {
+        width: calc(20px + 55vw);
+        height: auto;
+        display: flex;
+        padding: 0.1vw 0.1vw;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+      }
+      #home-3
+      {
+        width: calc(20px + 54vw);
+        height: auto;
+        display: flex;
+        padding: 0.1vw 0.1vw;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+      }
+      #home-4
+      {
+        width: calc(20px + 52vw);
+        height: auto;
+        display: flex;
+        padding: 0.1vw 0.1vw;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+      }
+      #home-5
+      {
+         width: calc(20px + 52vw);
+        height: auto;
+        display: flex;
+        padding: 0.1vw 0.1vw;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+        #teaching1
+      {
+        width:50vw;
+      
+      }
+      #teaching2
+      {
+        width:50vw;
+      
+      }
+      .anuraj1
+      {
+        width: calc(2px + 35vw);
+        height: auto;
+        font-size: calc(4px + 3vw);
+        border: 1px solid red;
+        border-radius: 0.5vw;
+        margin: calc(1px + 4.5vw) calc(1px + 4.5vw);
+        padding: calc(1px + 4.5vw) calc(1px + 4.5vw);
+        text-align: center;
+
+      }
+      .anuraj2
+      {
+        width: calc(2px + 35vw);
+        height: auto;
+        font-size: calc(4px + 3vw);
+        border: 1px solid red;
+        border-radius: 0.5vw;
+        margin: calc(1px + 4.5vw) calc(1px + 4.5vw);
+        padding: calc(1px + 4.5vw) calc(1px + 4.5vw);
+        text-align: center;
+
+      }
+        #C-H
+      {
+        font-size: calc(4px + 2.5vw);
+
+      }
+        
+          
+
+    }
+
+     @media (max-width: 380px)
+    {
+      #con-title
+      {
+        padding-top: calc(18px + 4.5vw);
+        margin-top: calc(10px + 4.5vw);
+        
+
+      }
+        
+
+    }
+
+  </style>
+    
+    
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ashis-Teacher of Mathematics</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">Exam (class12)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Exam (class 10)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    {% block content %} {% endblock content %}
+
+
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; AshisPal 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+</body>
+
+</html>

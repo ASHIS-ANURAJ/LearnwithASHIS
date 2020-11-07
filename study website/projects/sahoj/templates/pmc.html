@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <title>MATH-I.Q Burner</title>
+    
+    <style>
+          video {
+          max-width: 100%;
+          height: auto;
+          }
+         #origin
+         {
+           height:auto;
+           width:100vw;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+         }
+         #zero
+         {
+           height:22vw;
+           width:95vw;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           background-image: url("{% static 'images/Auraj.jpg'%}");
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-size: cover;
+          
+          
+          }
+
+         #first
+         {
+           height:10vw;
+           width:35vw;
+           padding: 1vw 1vw;
+           margin: 0.5vw 0.5vw;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           
+         }
+         
+         
+         #second
+         {
+           height:10vw;
+           width:25vw;
+           padding: 5vw 5vw;
+           margin: 1.5vw 1.5vw;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           text-align: center;
+           font-size: 3vw;
+           background-color: lightgrey;
+           color: blue;
+           transition: width 2s;
+          
+         }
+         #second:hover 
+         {
+            width: 30vw;
+           background-color: lightgreen;
+         }
+
+         .pmc1
+         {
+           height:8vw;
+           width:20vw;
+           padding: 2vw 2vw;
+           background-color:rgb(255, 165, 0);
+            border: 2px solid red;
+            border-radius: 5px;
+
+         }
+         .pmcli1
+         {
+           font-size: 1.5vw;
+           text-align: center;
+           padding: 0.2vw 0.2vw;
+           margin: 0.2vw 0.2vw;
+         }
+         .pmc
+         {
+           padding: 1.2vw 1.2vw;
+           margin: 1.2vw 1.2vw;
+         }
+         #vedio
+         {
+           height:auto;
+           width:60vw;
+           padding: 1vw 1vw;
+           margin: 0.5vw 0.5vw;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+
+         }
+         #vedio-layer
+         {
+           height:auto;
+           width:100vw;
+           padding: 1vw 1vw;
+           margin: 0.5vw 0.5vw;
+           display: flex;
+           flex-wrap: wrap;
+
+         }
+         #vedio-image
+         {
+           height:auto;
+           width:25vw;
+           padding: 1vw 1vw;
+           margin: 0.5vw 0.5vw;
+           display: flex;
+           flex-wrap: wrap;
+           border: 0.2vw solid red;
+           border-radius: 0.2vw;
+
+         }
+         #vedio-heading
+         {
+           height:auto;
+           width:90vw;
+           padding: 1vw 1vw;
+           margin: 0.5vw 0.5vw;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           font-style: oblique;
+           font-size: 2vw;
+           font-family: "Times New Roman", Times, serif;
+
+         }
+         .v-img
+         {
+           height:auto;
+           width:20vw;
+         }
+          
+
+         
+      
+    </style>
+      
+      
+    </head>
+        <body>
+          <div class="o" id="origin">
+                <div class="c" id="zero">
+                
+                    <div class="one" id="first">
+                            <ul class="pmc1" >
+                              <li class="pmcli1">
+                                <a class="pmc" href="/"> Go Back to Home
+                                </a>
+                              </li>
+                              <li class="pmcli1">
+                                <a class="pmc" href="/services"> Give Exam for class x
+                                </a>
+                              </li>
+                              <li class="pmcli1">
+                                <a class="pmc" href="/about">  Give Exam for class xi
+                                </a>
+                                </a>
+                              </li>
+                            </ul>
+                            
+                    </div>
+                      <div class="two" id="second">
+                        PERMUTATION AND COMBINATION
+                      </div>
+                </div>
+                {% csrf_token %}
+                {% for item in items %}
+                 <div class="vc" id="vedio-layer">
+                    <div class="vh" id="vedio-heading">
+                    <h1>{{item.heading}}</h1>
+                    
+                    </div>
+
+                    <div class="v" id="vedio">
+                      <video controls >
+                      <source src="{{item.contentvedio.url}}" alt="" type=video/mp4>
+                      </video>
+                    
+                    </div>
+                    <div class="vimage" id="vedio-image">
+                      <img src="{{item.supportimages.url}}" class="v-img" >
+                    </div>
+
+                 </div>
+                 {% endfor %}
+          </div>
+
+        </body>
+
+</html>

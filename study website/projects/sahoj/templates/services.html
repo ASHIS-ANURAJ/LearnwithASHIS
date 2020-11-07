@@ -1,0 +1,764 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MATH-I.Q Burner</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+<style>
+  .Qcontainer{
+    padding: 1vw 1vw;
+    display: flex;
+    justify-content: center;
+    flex direction: row;
+    flex-wrap: wrap;
+    width:100vw;
+    height: auto;
+    text-align: center;
+    margin top:2vw;
+
+    
+  }
+  .Qcontainer1
+  {
+    padding: 5vw 5vw;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100vw;
+    height: auto;
+    text-align: center;
+    margin : 0.5vw 3vw;
+    vertical-align:center;
+
+    
+    
+    
+    
+    
+
+    
+  }
+  .Qcontainer1::before
+  {
+    content:"";
+    position:absolute;
+    top:0.5vw;
+    right:0.5vw;
+    bottom:0.5vw;
+    left:0.5vw;
+    background-image: url("{% static 'images/c1.jpg'%}");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;;
+    z-index: -2;
+    opacity: 0.7;
+    
+  }
+
+
+
+  .gigiQno {
+    height:12vw;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    flex-wrap: wrap;
+    padding: 4vw 4vw;
+    z-index: 1;
+    background-color:coral;
+    margin: 6vw 8vw;
+    text-shadow: 0 0 3px #FF0000;
+    border: 2px solid grey;
+    border-radius: 3vw;
+    font-family: "Lucida Console", Courier, monospace;
+    box-shadow: 1vw 1vw green;
+    
+    
+    
+  }
+
+    
+
+  .gigiQ{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100vw;
+    padding: 2vw 5vw;
+    
+
+    
+  }
+  .img
+  {
+    height:auto;
+    width:58vw;
+    border-radius: 3vw;
+    border: 0.2vw solid green;
+
+
+  }
+
+  .gigi{
+    height:12vw;
+    width:10vw;
+    
+
+    display: flex;
+    flex direction:row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1vw 1vw;
+    background-color:red;
+    margin-left:10vw;
+
+    
+
+    
+    
+  }
+  .option{
+    height:6vw;
+    width:10vw;
+    font-size: 3vw;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:orange;
+    padding: 1vw 0.5vw;
+    z-index: 1;
+    
+    
+
+    
+
+
+  }
+  .rline {
+    height:10vw;
+    width:70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vw 0.1vw;
+    flex-wrap: wrap;
+    margin: 6vw 12vw;
+    background-color:orange;
+    border-radius: 3vw;
+    border: 0.2vw solid green;
+    
+
+  }
+  .rline h3{
+    color: green;
+    font-size: 3.5vw;
+    padding: 1.5vw 2.5vx;
+    flex-wrap: wrap;
+    margin: 2vw;
+    font-family:Lucida Console;
+    
+
+  }
+  .check1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height:20vw;
+    width:100vw;
+    
+    
+
+  }
+
+
+
+
+  #top1{
+    color: brown;
+    font-family: 'Lexend Peta', sans-serif;
+    height:22.5gvw;
+    width:55vw;
+    padding: 2.5vw 2.5vw;
+    margin top: 4vw;
+    display: flex;
+    flex direction: column;
+    flex-wrap: wrap;
+    
+    
+  }
+
+
+  #l1{
+    font-size: calc(4px + 3.5vw);
+    font-family: "Lucida Console", Courier, monospace;
+    color: green;
+    
+    
+
+  }
+  #l2{
+    font-size: calc(4px + 3.5vw);
+    font-family: "Lucida Console", Courier, monospace;
+    color: green;
+    
+
+  }
+  #l3{
+    font-size:calc(4px + 3.5vw);
+    font-family: "Lucida Console", Courier, monospace;
+    color: green;
+    border-radius: 3vw;
+    border: 0.2vw solid green;
+    
+
+  }
+  #butsuccess{
+    height:10vw;
+    width:30vw;
+    display: inline-block;
+    font-size: 3vw;
+    padding: 1.5vw 2.5vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 1.5vw;
+  }
+  #butsuccess1{
+    height:10vw;
+    width:30vw;
+    display: inline-block;
+    font-size: 3vw;
+    padding: 1.5vw 2.5vx;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 1.5vw;
+  }
+  #UserAnswers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    font-size: 30px;
+    padding: 15px 25px;
+
+
+  }
+  #UserAnswers1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    font-size: 30px;
+    padding: 15px 25px;
+    flex-wrap: wrap;
+
+
+  }
+  #hidden1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    font-size: 30px;
+    padding: 15px 25px;
+    
+
+
+  }
+  .rb
+  {
+    width: 100%;
+    height: 2em;
+    border: 6vw solid green;
+    
+    
+  }
+
+  #null
+  {
+    width:100vw;
+    height: 35vw;  
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:skyblue;
+
+
+  } 
+  #nulllogo1 
+  {
+    width:30vw;
+    height: 30vw;  
+    padding: 2vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    
+
+  } 
+  #logoimg1
+  {
+    width:calc(5px + 25vw);
+    height: calc(5px + 25vw);
+    border-radius: 3vw;
+    border: 0.2vw solid green;
+  }
+
+  @media (max-width: 580px)
+  {
+    #top1{
+      
+      padding: calc(5px + 4vw) calc(5px + 1vw);
+      margin : calc(2px + 2vw) 0.2px; 
+      height: calc(30px + 20vw); 
+      
+    }
+    .Qcontainer
+    {
+        padding-top:calc(5px + 0.5vw);
+        padding-bottom:calc(5px + 0.5vw);
+        margin-top:2px;
+
+    
+    }
+    
+    #null
+    {
+      margin-top:calc(4px + 0.5vw);
+      height: calc(100px + 45vw); 
+      padding-top:calc(5px + o.5vw);
+      padding-bottom:calc(5px + 0.5vw);
+
+    }
+    
+    #nulllogo1
+    {
+        margin-top:calc(4px + 5vw);
+        height: calc(80px + 45vw); 
+        padding-top:calc(15px + 15vw);
+
+
+    }
+    
+    .gigiQno p
+    {
+        height:20vw;
+        width:70vw;
+        flex-wrap: wrap;
+        padding: 0.2vw 0.2vw;
+    
+    
+    }
+    
+
+  }
+  @media (max-width: 380px)
+  {
+    #null
+    {
+      margin-top:calc(5px + 0.5vw);
+      height: calc(180px + 45vw); 
+      padding-top:calc(15px + o.5vw);
+      padding-bottom:calc(15px + 0.5vw);
+
+    }
+    #nulllogo1
+    {
+        margin-top:calc(5px + 5vw);
+        height: calc(150px + 45vw); 
+        padding-top:calc(25px + 30vw);
+
+
+    }
+
+  }
+
+
+        
+
+
+
+  </style>
+ 
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/blog-home.css'%}" rel="stylesheet">
+ 
+<!-- remove1 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+<script>
+
+
+</script>
+
+  
+<!-- remove1 end -->
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ashis-Teacher of Mathematics</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">Exam (class12)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Exam (class10)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <center>
+    <div id="null"> 
+        <div id="top1"> <p id="l1"> ONLINE EXAMS : MATH </p>
+        
+      
+        <p id="l2">LEVEL : Class 10</p>
+        <p id="l3"> choose the correct option</p>
+        </div>
+        <div id="nulllogo1"> 
+            <img src= "{% static 'images/b4.png'%}"; id="logoimg1" >
+        </div>
+
+    </div>
+      
+
+
+  </center>
+<div class="Qcontainer">
+  <div class="Qcontainer1">
+  {% csrf_token %}
+  
+  
+       
+   {% for quiz in quizs %}
+      
+      
+      
+      
+        
+            <div class="gigiQno"><p>QUESTION NUMBER :  {{quiz.questionNO}}</p> </div> <div class="gigiQ" ><img src="{{quiz.Questions.url}}" class="img" ></div>
+           
+           
+      
+        
+        
+        
+    
+        
+        
+      
+          <div class="rline" id="i1"><h3>Choose the correct option</h3></div>
+          <div class="gigi" id="q1"><input type = "radio" id = "option1"  class="rb" name = "{{quiz.questionNO}}" value="{{quiz.option1}}"><div class ="option">{{quiz.option1}}</div></div>
+           
+           
+          
+
+        
+      
+      
+           <div class="gigi" id="q2"><input type = "radio" id = "option2" class="rb" name = "{{quiz.questionNO}}" value="{{quiz.option2}}" ><div class ="option">{{quiz.option2}}</div></div>
+           
+           
+           
+
+        
+        
+      
+           <div class="gigi" id="q3"><input type = "radio" id = "option3" class="rb" name = "{{quiz.questionNO}}" value="{{quiz.option3}}" ><div class ="option">{{quiz.option3}}</div></div>
+           
+           
+           
+
+        
+        
+      
+           <div class="gigi" id="q4"><input type = "radio" id = "option4" class="rb" name ="{{quiz.questionNO}}" value="{{quiz.option4}}"><div class ="option">{{quiz.option4}}</div></div>
+           
+           
+           
+          
+          
+           <td><label class="rb1" id="hidden1"  style=" display: none ; color: green"> CORRECT ANSWER IS : {{quiz.correctAns}}</label>
+           
+           
+           
+           
+
+        
+        
+        
+          
+           <p hidden class="rb2" >{{quiz.correctAns}}</p>
+           
+           
+          
+      
+      
+       
+        <hr/>
+        
+      
+      
+      
+      
+       
+      
+      
+      
+      
+      
+      
+    
+    
+
+
+
+    
+    
+    <hr/>
+   
+    
+   {% endfor %}
+   <hr/>
+    <div class="check1"><input type="submit" value="click for results" id="butsuccess"  onclick="getanswers()"/ ></div><br>
+    <b id="UserAnswers"></b>
+    <hr/>
+    <div class="check1"><input type="submit" value="click for score" id="butsuccess1" onclick="getscore()"/ ></div><br>
+    <b id="UserAnswers1"></b>
+    
+    <hr/>
+  
+  </div>
+  
+</div>
+
+
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; ASHIS PAL 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+<!-- remove2 -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<!-- remove2 end -->
+</body>
+
+
+
+
+
+
+ <script>
+    $(document).ready(function()
+       {
+         $("#butsuccess").click(function()
+          {
+             $(".rb1").show();
+             $(".rb1").attr("disabled",true);
+
+          });
+        });
+
+   
+    var b = document.getElementsByClassName("rb2");
+      
+        
+        let c = [];
+        for(i=0;i<b.length;i++)
+        {
+          c[i]=b[i].textContent;
+        }
+        console.log(c);
+
+
+  
+  
+   var s =[];
+   var t=[];
+   
+   let e = document.getElementsByTagName("input");
+
+   function getanswers()
+      {
+        
+        
+        
+
+         document.getElementById("UserAnswers").innerHTML="";
+        
+         for( i=0,j=0;i<=e.length;i++)
+         {
+           if(e[i].type=='radio')
+         
+         
+           {
+             
+             if(e[i].checked)
+             {
+               t[j]=c[e[i].name-1];
+               s[j]=e[i].value;
+               j=j+1;
+               
+                 
+               document.getElementById("UserAnswers").innerHTML+="Q :"+e[i].name+" The Answer you selected is :"+e[i].value+"<br/>";
+               
+             }
+             
+           
+            }
+            
+          }
+        
+      
+      }
+    
+    let score=0;
+    function getscore()
+    {
+      document.getElementById("UserAnswers1").innerHTML="";
+    
+
+      for(i=0;i<t.length;i++)
+      {
+        
+        
+           if(s[i]==t[i])
+           {
+             score=score+1;
+           }
+      
+        
+        
+      }
+      
+        
+      
+      document.getElementById("UserAnswers1").innerHTML+="your score is : "+score+"<br/>";
+
+    }
+    console.log(s);
+    console.log(t);
+    
+    
+  
+   
+
+    
+        
+      
+   
+
+
+        
+        
+       
+  
+   
+
+        
+
+  
+ </script>
+
+
+
+</html>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
